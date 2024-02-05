@@ -3,8 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import Canvas from './Offcanvas';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Header.css';
-import logo from "../Asset/apple.png";
+import logo from "../Asset/bird-logo.png";
 
 const Header = ({selectedComponent,setSelectedComponent}) => {
 return (
@@ -12,7 +11,7 @@ return (
    <Col xs={10} className='p-4'>
    <div className='d-flex justify-content-between'>
       <div>
-         <img src={logo} alt="Description of the " style={{ width: '35px', height: '35px'}} />
+         <img src={logo} alt="Description of the " style={{ width: '75px', height: '50px'}} />
          <span className='d-lg-none d-xl-inline-flex'>APPLE - NIN</span>
       </div>
       <div>

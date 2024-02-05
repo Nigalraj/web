@@ -3,9 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import Calculator from './Calculator';
-import Form from './Form';
-import Sidebar from './Sidebar';
+import { Link } from 'react-router-dom';
 
 function Canvas({ setSelectedComponent }) {
   const [show, setShow] = useState(false);
@@ -23,23 +21,31 @@ function Canvas({ setSelectedComponent }) {
       <Button variant="primary" onClick={handleShow}>
         <FontAwesomeIcon icon={faBars} size="lg" className="menu-icon" />
       </Button>
-
       <Offcanvas show={show} onHide={handleClose} className="canvas">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Features</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
            <div className='d-flex flex-column'>
-            <span  onClick={() => handleComponentClick('Calculator')} className='fea py-2'>
-              Calculator
-            </span>
-            <span  onClick={() => handleComponentClick('Form')} className='fea py-2'>
-              Form
-            </span>
-            <span className='fea py-2'>DashBoard</span>
-            <span className='fea py-2'>FAQ</span>
-            <span className='fea py-2'>About</span>
-          </div> 
+           <Link to="/calculator" className=' py-3 text-dark text-decoration-none' style={{ cursor: 'pointer' }}>
+             <span className='p-3'>Calculator</span>
+          </Link>
+          <Link to="/form" className=' py-3 span  text-dark text-decoration-none' style={{ cursor: 'pointer' }}>
+             <span className='p-3'>Form</span>
+          </Link>
+          <Link to="/dashboard" className=' py-3 text-dark  text-decoration-none' style={{ cursor: 'pointer' }}>
+            <span className='p-3'>Dashboard</span>
+          </Link>
+          <Link to="/table" className=' py-3 text-dark  text-decoration-none' style={{ cursor: 'pointer' }}>
+            <span className='p-3'>ManagerUser</span>
+          </Link>
+          <Link to="/faq" className=' py-3 text-dark  text-decoration-none' style={{ cursor: 'pointer' }}>
+            <span className='p-3'>FAQ</span>
+          </Link>
+          <Link to="/about" className=' py-3  text-dark text-decoration-none' style={{ cursor: 'pointer' }}>
+            <span className='p-3'>About</span>
+          </Link>
+        </div> 
         </Offcanvas.Body>
       </Offcanvas>
     </>

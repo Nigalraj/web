@@ -7,7 +7,10 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
+import ManagerUser from './components/MangerUser';
 import { Col } from 'react-bootstrap';
+import userData from './Data'
+import UserDetails from './components/UserDetails';
 import './App.css'
 
 
@@ -21,19 +24,26 @@ const App = () => {
     <Router>
       <Header selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent} />
       <div className='d-flex d-lg-none body'>
-      {selectedComponent === null && <Dashboard />}
-      {selectedComponent === 'Form' && <Form />}
-      {selectedComponent === 'Calculator' && <Calculator />}
+      <Routes>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/calculator' element={<Calculator />} />
+          <Route path='/form' element={<Form />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/table' element={<ManagerUser users={userData} />} />
+          <Route path='/user/:userId' element={<UserDetails users={userData} />} />
+      </Routes>
       </div>
       <div className='d-none d-lg-inline-flex'>
       <Col xs={2} className=''><Sidebar sideComponent={sideComponent} setSideComponent={setSideComponent}/>
         </Col>
         <Col xs={10} className='d-none d-lg-inline-flex body just'>
         <Routes>
-          <Route path='/' element={<Dashboard />}></Route>
-          <Route path='/calculator' element={<Calculator />}></Route>
-          <Route path='/form' element={<Form />}></Route>
-          <Route path='/dashboard' element={<Dashboard />}></Route>
+          <Route path='/' element={<Dashboard />}/>
+          <Route path='/calculator' element={<Calculator />}/>
+          <Route path='/form' element={<Form />}/>
+          <Route path='/dashboard' element={<Dashboard />}/>
+          <Route path='/table' element={<ManagerUser users={userData} />} />
+          <Route path='/user/:userId' element={<UserDetails users={userData} />} />
         </Routes>
         </Col>
       </div>

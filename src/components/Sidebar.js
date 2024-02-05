@@ -18,6 +18,9 @@ const Sidebar = ({ setSideComponent }) => {
       <Link to="/dashboard" className=' py-3 text-dark  text-decoration-none' style={{ cursor: 'pointer' }}>
         <span className='p-3'>Dashboard</span>
       </Link>
+      <Link to="/table" className=' py-3 text-dark  text-decoration-none' style={{ cursor: 'pointer' }}>
+        <span className='p-3'>ManagerUser</span>
+      </Link>
       <Link to="/faq" className=' py-3 text-dark  text-decoration-none' style={{ cursor: 'pointer' }}>
         <span className='p-3'>FAQ</span>
       </Link>

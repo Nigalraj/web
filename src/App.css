@@ -1,6 +1,7 @@
 .sidebar{
-    background-color: #FFF3CF;
+    background-color: #4C8EB6;
     height: 100vh !important;
+    color: white !important;
 }
 
 .sidebar span:hover {
@@ -22,3 +23,51 @@
     justify-content: center;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-decoration: none !important;
+  }
+  
+  .pagination-previous,
+  .pagination-next {
+    background-color: #1c2c7b; 
+    color: #d0c9c9 !important;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration:none;
+  }
+  
+  .pagination-previous:hover,
+  .pagination-next:hover {
+    background-color: #b30009 !important; 
+  }
+  
+  .active {
+    background-color: #0056b3;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+.header{
+    background-color:  #040F18;
+    color: white;
+}
+.canvas{
+    background-color: #4C8EB6;
+}
+.fea:hover {
+    border-left: 4px solid #7cfcb3; 
+}
+
+.fea:focus {
+    border-left: 4px solid #897cfc ;
+}
